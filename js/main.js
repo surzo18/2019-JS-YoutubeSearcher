@@ -1,3 +1,10 @@
+window.onload = function(){
+    var h = window.innerHeight;
+    console.log(h);
+    document.getElementById("searchMain").style["height"] = h+'px';
+};
+
+
 
 const APIkey = "AIzaSyBknkksnmSstFltBx_QBlYuDNKp6aS95Ck";
 const  BASE_URI = "https://www.googleapis.com/youtube/v3/search?";
@@ -10,8 +17,8 @@ function submit_me(){
     let formData =  serializeArray(document.getElementsByTagName('form')[0]);
     let query =  formData[0].value;
 
-    let URI = BASE_URI + 'key=' +APIkey + '&' + 'part=snippet&' + 'q=' +  query  + '&maxResults=50';
-    document.getElementById("loader").style["display"] = "block";
+    let URI = BASE_URI + 'key=' +APIkey + '&' + 'part=snippet&' + 'q=' +  query  + '&maxResults=9';
+    document.getElementById("loader").style["visibility"] = "visible";
     requestData(URI);
 }
 
@@ -32,7 +39,11 @@ function requestData(URI = ''){
                 createCard(item);
             });
             setTimeout(function(){
-                document.getElementById("loader").style["display"] = "none";
+                document.getElementById("results").style["display"] = "block";
+                var elmnt = document.getElementById("items");
+                elmnt.scrollIntoView();
+                let xhr = new XMLHttpRequest();
+                document.getElementById("loader").style["visibility"] = "hidden";
             }, 1000);
         }
         else {
@@ -46,7 +57,7 @@ function requestData(URI = ''){
 
 function createCard(item){
     let div = document.createElement("div");
-    div.classList.add("col-4","mt-3","d-flex","align-items-stretch");
+    div.classList.add("col-lg-4","col-sm-12","col-md-6","mt-3","d-flex","align-items-stretch");
 
     let card = document.createElement("div");
     card.classList.add("card");
@@ -84,6 +95,7 @@ function createCard(item){
     div.append(card);
     document.getElementById("items").append(div);
 
+
 }
 
 
@@ -96,4 +108,24 @@ function serializeArray(form) {
         }
     }
     return objects;
+}
+
+mybutton = document.getElementById("topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    console.log("Scr");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
