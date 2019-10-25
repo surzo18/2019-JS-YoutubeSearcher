@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+#title{
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-bottom: 4px solid #424241;
+    display:inline-block;
+}
+form{
+    max-width: 400px;
+    min-width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Montserrat'!important;
+}
+
+.btn{
+    letter-spacing: 0.08em;
+    margin-top:auto;
+}
+
+#loader{
+    display:none;
+    margin-left:auto;
+}
+
+

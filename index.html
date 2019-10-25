@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projekt MIN0110 </title>
+    <script src="https://kit.fontawesome.com/18e42a7034.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+<body class="container text-center">
+<h1 class="text-center mt-2 mb-2" id="title">
+    Youtube searcher
+</h1>
+<form action="#" method="get" id="youtubeForm">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Video</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Search query" name="query" aria-label="Username"
+               aria-describedby="basic-addon1">
+    </div>
+    <button class="btn btn-danger btn-block text-uppercase" onclick="submit_me(); return false;">
+        <i class="fab fa-youtube"></i>
+        look for this
+    </button>
+</form>
+<div class="loading mt-3" id="loader">
+    <div class="spinner-grow text-success" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-danger" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-warning" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<div class="row mt-4" >
+    <div class="col-10 offset-1">
+        <div class="row" id="items">
+            <!--- apend here -->
+        </div>
+    </div>
+</div>
+<script  src="./js/main.js" ></script>
+</body>
+</html>
