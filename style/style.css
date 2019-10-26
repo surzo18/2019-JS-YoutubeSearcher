@@ -39,7 +39,7 @@ form{
     display:none;
 }
 
-#topBtn {
+#arrowBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */
@@ -56,7 +56,7 @@ form{
     font-size: 18px; /* Increase font size */
 }
 
-#topBtn:hover {
+#arrowBtn:hover {
     color: #fff;
     background-color: #c82333;
     border-color: #bd2130;

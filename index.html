@@ -24,7 +24,7 @@
         <input type="text" class="form-control" placeholder="Search query" name="query" aria-label="Username"
                aria-describedby="basic-addon1">
     </div>
-    <button class="btn btn-danger btn-block text-uppercase" onclick="submit_me(); return false;">
+    <button class="btn btn-danger btn-block text-uppercase" onclick="formValidator.validateInputs(); return false;">
         <i class="fab fa-youtube"></i>
         look for this
     </button>
@@ -52,10 +52,10 @@
 </div>
 </section>
 
-<button onclick="topFunction()" id="topBtn" title="Go to top">
+<button onclick="pageRunner.topFunction()" id="arrowBtn" title="Go to top">
     <i class="fa fa-arrow-up"></i>
 </button>
 
-<script  src="./js/main.js" ></script>
+<script  type="module" src="./js/main.js" ></script>
 </body>
 </html>
