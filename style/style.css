@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+body{
+    visibility: hidden;
+}
+
 #searchMain{
     background-image: url('../assets/imgs/bg.png');
     background-position: bottom; /* Center the image */

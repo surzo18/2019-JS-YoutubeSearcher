@@ -4,7 +4,10 @@ export const pageRunner = function() {
     let arrowButton = document.getElementById("arrowBtn");
 
     let initRunner = function(){
-        window.onload = function(){resizeBackground()};
+        window.onload = function(){
+            resizeBackground()
+            document.getElementsByTagName("body")[0].style["visibility"] = "visible";
+        };
         window.onresize = function(){resizeBackground()};
 
         window.onscroll = function() {showArrowButton()};

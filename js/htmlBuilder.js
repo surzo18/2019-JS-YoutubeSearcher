@@ -40,6 +40,16 @@ export const htmlBuilder = function() {
     card.append(cardBody);
     div.append(card);
     document.getElementById("items").append(div);
+
+    card.animate([
+        // keyframes
+        { opacity: '0' },
+        { opacity: '1' }
+    ], {
+        // timing options
+        duration: 2000,
+        easing:'ease-out'
+    });
 }
 
 return {createCard};
