@@ -4,6 +4,13 @@ window.onload = function(){
     document.getElementById("searchMain").style["height"] = h+'px';
 };
 
+window.onresize = function(){
+    var h = window.innerHeight;
+    console.log(h);
+    document.getElementById("searchMain").style["height"] = h+'px';
+};
+
+
 
 
 const APIkey = "AIzaSyBknkksnmSstFltBx_QBlYuDNKp6aS95Ck";
@@ -41,7 +48,9 @@ function requestData(URI = ''){
             setTimeout(function(){
                 document.getElementById("results").style["display"] = "block";
                 var elmnt = document.getElementById("items");
-                elmnt.scrollIntoView();
+                elmnt.scrollIntoView({
+                    behavior: 'smooth'
+                });
                 let xhr = new XMLHttpRequest();
                 document.getElementById("loader").style["visibility"] = "hidden";
             }, 1000);
@@ -116,7 +125,6 @@ mybutton = document.getElementById("topBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    console.log("Scr");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
     } else {
@@ -126,6 +134,5 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    window.scrollTo({top: 0, behavior: 'smooth'});
 }

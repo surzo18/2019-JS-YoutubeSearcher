@@ -5,6 +5,7 @@
     background-position: bottom; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: 100% auto;
+    background-color: #F9F9F9;
 }
 
 #title{
