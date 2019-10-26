@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
-<body class="container text-center">
-<h1 class="text-center mt-2 mb-2" id="title">
+<body class="text-center">
+<section id="searchMain" class="container-fluid">
+
+<h1 class="text-center mb-2" id="title">
     Youtube searcher
 </h1>
 <form action="#" method="get" id="youtubeForm">
@@ -22,30 +24,38 @@
         <input type="text" class="form-control" placeholder="Search query" name="query" aria-label="Username"
                aria-describedby="basic-addon1">
     </div>
-    <button class="btn btn-danger btn-block text-uppercase" onclick="submit_me(); return false;">
+    <button class="btn btn-danger btn-block text-uppercase" onclick="formValidator.validateInputs(); return false;">
         <i class="fab fa-youtube"></i>
         look for this
     </button>
 </form>
-<div class="loading mt-3" id="loader">
-    <div class="spinner-grow text-success" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-danger" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-warning" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-</div>
+        <div class="loading mt-3" id="loader">
+            <div class="spinner-grow text-success" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-danger" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+</section>
 
-<div class="row mt-4" >
+<section class="container mt-3" id="results">
+<div class="row"  >
     <div class="col-10 offset-1">
         <div class="row" id="items">
             <!--- apend here -->
         </div>
     </div>
 </div>
-<script  src="./js/main.js" ></script>
+</section>
+
+<button onclick="pageRunner.topFunction()" id="arrowBtn" title="Go to top">
+    <i class="fa fa-arrow-up"></i>
+</button>
+
+<script  type="module" src="./js/main.js" ></script>
 </body>
 </html>
