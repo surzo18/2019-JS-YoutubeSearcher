@@ -1,24 +1,36 @@
-export const pageRunner = function() {
+export const pageRunner = function () {
 
+    /** document height */
     let windowHeight = window.innerHeight;
+    /** window arrow BUTTTON ELEMENT */
     let arrowButton = document.getElementById("arrowBtn");
 
-    let initRunner = function(){
-        window.onload = function(){
+    /**
+     * Set up window events
+     */
+    let initRunner = function () {
+        window.onload = function () {
             resizeBackground()
             document.getElementsByTagName("body")[0].style["visibility"] = "visible";
         };
-        window.onresize = function(){resizeBackground()};
+        window.onresize = function () {
+            resizeBackground()
+        };
 
-        window.onscroll = function() {showArrowButton()};
+        window.onscroll = function () {
+            showArrowButton()
+        };
     };
 
-    function resizeBackground(){
+    /**
+     * resize background to document size
+     */
+    function resizeBackground() {
         windowHeight = window.innerHeight;
-        document.getElementById("searchMain").style["height"] = windowHeight+'px';
+        document.getElementById("searchMain").style["height"] = windowHeight + 'px';
     }
 
-    // When the user scrolls down 20px from the top of the document, show the button
+    // When the user scrolls down {windowHeight}px from the top of the document, show the button
     function showArrowButton() {
         if (document.body.scrollTop > windowHeight || document.documentElement.scrollTop > windowHeight) {
             arrowButton.style.display = "block";
@@ -32,5 +44,25 @@ export const pageRunner = function() {
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
-    return {initRunner,topFunction}
+    /**
+     * retirn HTML loader element
+     * @returns {HTMLElement}
+     */
+    function getLoader() {
+        return document.getElementById('loader');
+    }
+
+    /**
+     * Toggle visibility of element
+     * @param elm
+     */
+    function toggleElementVisibylity(elm) {
+        if (elm.style["visibility"] === "visible") {
+            elm.style["visibility"] = "hidden";
+        } else {
+            elm.style["visibility"] = "visible";
+        }
+    }
+
+    return {initRunner, topFunction, getLoader, toggleElementVisibylity}
 }();

@@ -1,26 +1,39 @@
-import {dataGetter} from './dataGetter.js';
-
-
 export const formValidator = function() {
-    let data = {};
 
-    function validateInputs(){
-        console.log("Validate");
-        parseData();
-        //Todo: postupnost nie jedobra na zaciatok to staci
-        dataGetter.getData(data);
+    /**
+     * Validate form inputs
+     * @param form
+     */
+    function validateInputs(form){
+        let data = parseData(form);
+        if(data.query === ""){
+            return false;
+        }
+
+        return data;
     }
 
-    //Todo: prepisat lepsie to form[0]
-    function parseData(){
-        let formData =  serializeArray(document.getElementsByTagName('form')[0]);
-        data.query = formData[0].value;
+    /**
+     * Parse form data
+     * @param form
+     */
+    function parseData(form){
+        let formData =  serializeArray(form)[0];
+        let data ={};
+        data.query = formData.value;
+
+        return data;
     }
 
-    function serializeArray(form) {
+    /**
+     *
+     * @param forms
+     * @returns {[]}
+     */
+    function serializeArray(forms) {
         var objects = [];
-        if (typeof form == 'object' && form.nodeName.toLowerCase() == "form") {
-            var fields = form.getElementsByTagName("input");
+        if (typeof forms == 'object' && forms.nodeName.toLowerCase() == "form") {
+            var fields = forms.getElementsByTagName("input");
             for(var i=0;i<fields.length;i++){
                 objects[objects.length] = { name: fields[i].getAttribute("name"), value: fields[i].value };
             }
@@ -28,5 +41,5 @@ export const formValidator = function() {
         return objects;
     }
 
-    return {validateInputs,data};
+    return {validateInputs};
 }();

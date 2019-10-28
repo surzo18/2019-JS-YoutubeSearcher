@@ -1,3 +1,6 @@
+import {youtubeApi} from './youtubeApi.js';
+
+
 export const htmlBuilder = function() {
 
 
@@ -52,5 +55,31 @@ export const htmlBuilder = function() {
     });
 }
 
-return {createCard};
+function createButtons(nextPageToken='',prevPageToken=''){
+    let div = document.createElement("div");
+    div.classList.add("col-12","mt-3");
+
+
+    if(prevPageToken !== '' && prevPageToken !== youtubeApi.getCurrentPage()){
+        let btnPrev = document.createElement("button");
+        btnPrev.onclick = youtubeApi.getPrevPage;
+        btnPrev.innerHTML = 'Previous Page';
+        btnPrev.classList.add("btn","btn-dark",'mr-2');
+        div.append(btnPrev);
+    }
+
+    if(nextPageToken !== ''){
+        let btnNext = document.createElement("button");
+        btnNext.onclick = youtubeApi.getNextPage;
+        btnNext.innerHTML = 'Next Page';
+        btnNext.classList.add("btn","btn-dark",'ml-2');
+        div.append(btnNext);
+    }
+
+
+    document.getElementById("items").append(div);
+
+}
+
+return {createCard,createButtons};
 }();

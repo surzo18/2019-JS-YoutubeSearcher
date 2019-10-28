@@ -1,9 +1,9 @@
 import {pageRunner} from './pageRunner.js';
-import {formValidator} from './formValidator.js';
+import {youtubeApi} from './youtubeApi.js';
 
 /*WINDOW VARS */
 window.pageRunner = pageRunner;
-window.formValidator = formValidator;
+window.youtubeApi = youtubeApi;
 
 /*Run Modules */
 pageRunner.initRunner();

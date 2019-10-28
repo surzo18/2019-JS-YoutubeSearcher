@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="sk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -10,52 +11,55 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
-<body class="text-center">
-<section id="searchMain" class="container-fluid">
 
-<h1 class="text-center mb-2" id="title">
-    Youtube searcher
-</h1>
-<form action="#" method="get" id="youtubeForm">
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Video</span>
+<body class="text-center">
+
+<section id="searchMain" class="container-fluid">
+    <h1 class="text-center mb-2" id="title">
+        Youtube searcher
+    </h1>
+
+    <form action="#" method="get" id="youtubeForm">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Video</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Search query" name="query" id="query-input" aria-label="Username"
+                   aria-describedby="basic-addon1">
         </div>
-        <input type="text" class="form-control" placeholder="Search query" name="query" aria-label="Username"
-               aria-describedby="basic-addon1">
+        <button class="btn btn-danger btn-block text-uppercase" id="yb-btn" onclick="youtubeApi.submitYoutubeForm(); return false;">
+            <i class="fab fa-youtube"></i> look for this
+        </button>
+        <p class="text-danger mt-2" id="error-text">Search phrase can't be empty </p>
+    </form>
+    <div class="loading mt-3" id="loader">
+        <div class="spinner-grow text-success" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
     </div>
-    <button class="btn btn-danger btn-block text-uppercase" onclick="formValidator.validateInputs(); return false;">
-        <i class="fab fa-youtube"></i>
-        look for this
-    </button>
-</form>
-        <div class="loading mt-3" id="loader">
-            <div class="spinner-grow text-success" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-            <div class="spinner-grow text-danger" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-            <div class="spinner-grow text-warning" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
 </section>
 
 <section class="container mt-3" id="results">
-<div class="row"  >
-    <div class="col-10 offset-1">
-        <div class="row" id="items">
-            <!--- apend here -->
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="row" id="items">
+                <!--- apend here -->
+            </div>
         </div>
     </div>
-</div>
 </section>
 
 <button onclick="pageRunner.topFunction()" id="arrowBtn" title="Go to top">
     <i class="fa fa-arrow-up"></i>
 </button>
 
-<script  type="module" src="./js/main.js" ></script>
+<script type="module" src="./js/main.js"></script>
 </body>
+
 </html>
