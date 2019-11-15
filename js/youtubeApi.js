@@ -37,6 +37,9 @@ export const youtubeApi = function() {
 
     };
 
+    /**
+     * Get Next page
+     */
     function getNextPage(){
         document.getElementById('query-input').style['border-color'] = '#ced4da';
         document.getElementById('error-text').style['display'] = 'none';
@@ -53,6 +56,9 @@ export const youtubeApi = function() {
         },1000);
     }
 
+    /**
+     * GetPrev Page
+     */
     function getPrevPage(){
         document.getElementById('query-input').style['border-color'] = '#ced4da';
         document.getElementById('error-text').style['display'] = 'none';
@@ -131,6 +137,7 @@ export const youtubeApi = function() {
             }
             else {
                 // request error
+                console.log(xhr);
                 alert('HTTP error' + xhr.status + xhr.statusText);
             }
         };
@@ -166,6 +173,10 @@ export const youtubeApi = function() {
         return URL;
     }
 
+    /**
+     * Get currentPageToken
+     * @returns {string}
+     */
     function getCurrentPage() {
         return currentPageToken;
     }

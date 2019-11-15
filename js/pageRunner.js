@@ -10,7 +10,7 @@ export const pageRunner = function () {
      */
     let initRunner = function () {
         window.onload = function () {
-            resizeBackground()
+            resizeBackground();
             document.getElementsByTagName("body")[0].style["visibility"] = "visible";
         };
         window.onresize = function () {
