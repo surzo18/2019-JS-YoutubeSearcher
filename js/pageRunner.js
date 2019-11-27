@@ -65,11 +65,11 @@ export const pageRunner = function () {
     }
     
     function saveDataToLocalStorage(data) {
-        if (localStorage.getItem(data.query) === null) {
-            localStorage.setItem(data.query, "1");
+        if (localStorage.getItem(data.query.toLowerCase()) === null) {
+            localStorage.setItem(data.query.toLowerCase(), "1");
         }
         else{
-            localStorage.setItem(data.query, (parseInt(localStorage.getItem(data.query)) + 1).toString());
+            localStorage.setItem(data.query.toLowerCase(), (parseInt(localStorage.getItem(data.query.toLowerCase())) + 1).toString());
         }
     }
 
