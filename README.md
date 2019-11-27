@@ -1,4 +1,5 @@
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![GitHub Logo](preview.png)
+Format: ![Alt Text](url)
 
 # Project Title
 
