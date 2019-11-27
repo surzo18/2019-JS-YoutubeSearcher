@@ -1,9 +1,9 @@
+# Youtube API searcher
+
+Custom youtube search engine for education purposes. This app connect to API throught API key from Google Console.
+This app consists from search engine and from charts.
+
 ![ApplicationPreview](preview.png)
-Format: ![Alt Text](preview.png)
-
-# Project Title
-
-One Paragraph of project description goes here
 
 ## Getting Started
 
