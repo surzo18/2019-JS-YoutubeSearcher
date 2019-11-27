@@ -1,12 +1,9 @@
 import {pageRunner} from './pageRunner.js';
 import {youtubeApi} from './youtubeApi.js';
-
-var a = 0;
-
-
-
+import {chartRunner} from "./chartRunner.js";
 
 /*WINDOW VARS */
+window.chartRunner = chartRunner;
 window.pageRunner = pageRunner;
 window.youtubeApi = youtubeApi;
 

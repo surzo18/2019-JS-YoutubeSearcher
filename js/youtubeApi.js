@@ -32,6 +32,8 @@ export const youtubeApi = function() {
             return;
         }
 
+        pageRunner.saveDataToLocalStorage(data);
+
         let URL = makeURL(data);
         requestData(URL);
 

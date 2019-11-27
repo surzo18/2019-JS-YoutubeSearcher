@@ -63,6 +63,15 @@ export const pageRunner = function () {
             elm.style["visibility"] = "visible";
         }
     }
+    
+    function saveDataToLocalStorage(data) {
+        if (localStorage.getItem(data.query.toLowerCase()) === null) {
+            localStorage.setItem(data.query.toLowerCase(), "1");
+        }
+        else{
+            localStorage.setItem(data.query.toLowerCase(), (parseInt(localStorage.getItem(data.query.toLowerCase())) + 1).toString());
+        }
+    }
 
-    return {initRunner, topFunction, getLoader, toggleElementVisibylity}
+    return {initRunner, topFunction, getLoader, toggleElementVisibylity, saveDataToLocalStorage}
 }();
