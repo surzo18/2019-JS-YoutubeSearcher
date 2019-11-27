@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body{
+    visibility: hidden;
+}
+
+#searchMain{
+    background-image: url('../assets/imgs/bg.png');
+    background-position: bottom; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100% auto;
+    background-color: #F9F9F9;
+}
+
+#title{
+    margin-top:200px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-bottom: 4px solid #424241;
+    display:inline-block;
+}
+form{
+    max-width: 400px;
+    min-width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Montserrat'!important;
+}
+
+.btn{
+    letter-spacing: 0.08em;
+    margin-top:auto;
+}
+
+#loader{
+    visibility:hidden;
+    margin-left:auto;
+}
+
+#results{
+    margin-bottom:20px;
+    display:none;
+}
+
+#arrowBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #dc3545; /* Set a background color */
+    border-color: #dc3545;
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px 25px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#arrowBtn:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+#error-text{
+    display: none;
+}
+
+#graphModal{
+    position: fixed;
+    top:20px;
+    left:20px;
+}
