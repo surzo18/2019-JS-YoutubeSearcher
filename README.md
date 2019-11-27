@@ -1,5 +1,5 @@
-![GitHub Logo](preview.png)
-Format: ![Alt Text](url)
+![ApplicationPreview](preview.png)
+Format: ![Alt Text](preview.png)
 
 # Project Title
 
