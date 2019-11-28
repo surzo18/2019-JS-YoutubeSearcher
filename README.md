@@ -11,48 +11,40 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+```diff
+This projects work only in chrome for now becouse it uses modules. If you want use other  browsers you need to install *babel* and *webpack* to built javascript.
+```
 
-```
-Give examples
-```
+You need to install [**npm**](https://www.npmjs.com/get-npm) before start here.
+
+We used some third partys tools and frameworks for this project:
+1.Chart.js
+2.Bootstrap with JQuery. 
+3.Font Awesome
+
+They are linked directly to index.html by link, so you don't need download anything. You just have to run npm install from termin in your project directory after you cloned it.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
 ```
-Give the example
+npm install
 ```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+This download all depedencies. After that you need to update your YoutubeApi Key in YoutubeApi.js file.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Bootstrap](https://getbootstrap.com) - The web CSS framework
+* [Npm](https://www.npmjs.com) - Package manager
+* [JQuery](https://jquery.com) - Javascript Libary
+* [Chart.js](https://www.chartjs.org) - Javascript libary for charts
+* [Font Awesome](https://fontawesome.com) - Font Icons Libary
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Adrián Mindek** - *Initial work* - [Surzo18](https://github.com/surzo18)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Free for use and sharing.
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
