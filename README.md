@@ -9,16 +9,19 @@ This app consists from search engine and charts.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### You should know
 
-```diff
--This projects work only in chrome for now becouse it uses modules. 
+This projects work only in chrome for now becouse it uses modules. 
 If you want use other  browsers you need to install *babel* and *webpack* to built javascript.
-```
+
+Use your own API key. The one is used doesn't work anymore.
+
+### Prerequisites
 
 You need to install [**npm**](https://www.npmjs.com/get-npm) before start here.
 
 We used some third partys tools and frameworks for this project:
+
 1.Chart.js
 2.Bootstrap with JQuery. 
 3.Font Awesome
@@ -31,7 +34,7 @@ They are linked directly to index.html by link, so you don't need download anyth
 npm install
 ```
 
-This download all depedencies. After that you need to update your YoutubeApi Key in YoutubeApi.js file.
+This download all depedencies. After that **you need to update your YoutubeApi Key in YoutubeApi.js file.**
 
 ## Built With
 
