@@ -12,7 +12,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 ```diff
-This projects work only in chrome for now becouse it uses modules. If you want use other  browsers you need to install *babel* and *webpack* to built javascript.
+-This projects work only in chrome for now becouse it uses modules. 
+If you want use other  browsers you need to install *babel* and *webpack* to built javascript.
 ```
 
 You need to install [**npm**](https://www.npmjs.com/get-npm) before start here.
