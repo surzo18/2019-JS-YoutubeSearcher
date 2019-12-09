@@ -1,5 +1,5 @@
 export const chartRunner = function () {
-
+    let myChart;
     function updateChart() {
         let items = {...localStorage};
 
@@ -19,6 +19,8 @@ export const chartRunner = function () {
                 data: resVals,
             }]
         };
+        if(myChart !== undefined)
+         myChart.destroy();
 
         createChart(data);
     }
@@ -32,7 +34,7 @@ export const chartRunner = function () {
 
     function createChart(newData){
         let ctx = document.getElementById('myChart');
-        let myChart = new Chart(ctx, {
+         myChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: newData.labels,
@@ -67,6 +69,7 @@ export const chartRunner = function () {
                     }]
                 }
             }
+
         });
     }
 
